@@ -17,5 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    path(r'^admin/', admin.site.urls),
+    path('',include('neibour.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
