@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'neibour',
-    'bootstrap4',
+    'neibour',
+    'bootstrap3',
     'crispy_forms',
 ]
 
@@ -85,6 +85,8 @@ DATABASES = {
         'NAME': 'hood',
         'USER': 'moringa',
         'PASSWORD':'Access',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
