@@ -18,7 +18,7 @@
                 {%if request.user.profile.neighbourhood == hood %}
 
                 <a class="btn btn-default btn-small" href="{%url 'singlehood' hood.id%}">View Hood</a>
-                <a class="btn btn-danger" href="{%url 'leavehood' hood.id%}">Leave Hood</a>
+                <a class="btn btn-dark" href="{%url 'leavehood' hood.id%}">Leave Hood</a>
 
                 {%elif not request.user.profile.neighbourhood%}
 

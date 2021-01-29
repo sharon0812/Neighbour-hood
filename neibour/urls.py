@@ -1,24 +1,25 @@
-from django.urls import path
+# from django.urls import path
 from . import views
 from neibour import views as user_views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import url
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('accounts/register/', views.register, name='register'),
-    path('profile/', views.profile, name='profile'),
-    path('update_profile/', user_views.update_profile, name='update_profile'),
-    path('new_hood/', views.new_hood, name='new_hood'),
-    path('hood/', views.hood, name='hood'),
-    path('edithood/', views.edit_hood, name='edithood'),
-    path('businesses/<id>', views.businesses, name='hoodbusiness'),
-    path('singlehood/<id>', views.singlehood, name='singlehood'),
-    path('new_business/', views.newbiz, name='newbiz'),
-    path('post', views.post, name='post'),
-    path('hoodpost/<id>', views.posthood, name='hoodpost'),
-    path('joinhood/<id>', views.joinhood, name='joinhood'),
-    path('leavehood/<id>', views.leavehood, name='leavehood'),
+    url('', views.home, name='home'),
+    url('accounts/register/', views.register, name='register'),
+    url('profile/', views.profile, name='profile'),
+    url('update_profile/', user_views.update_profile, name='update_profile'),
+    url('new_hood/', views.new_hood, name='new_hood'),
+    url('hood/', views.hood, name='hood'),
+    url('edithood/', views.edit_hood, name='edithood'),
+    url('businesses/<id>', views.businesses, name='hoodbusiness'),
+    url('singlehood/<id>', views.singlehood, name='singlehood'),
+    url('new_business/', views.newbiz, name='newbiz'),
+    url('post', views.post, name='post'),
+    url('hoodpost/<id>', views.posthood, name='hoodpost'),
+    url('joinhood/<id>', views.joinhood, name='joinhood'),
+    url('leavehood/<id>', views.leavehood, name='leavehood'),
 ]
 
 if settings.DEBUG:
